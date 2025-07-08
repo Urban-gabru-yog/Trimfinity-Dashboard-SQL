@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10  # ✅ Valid version
+          python-version: 3.11  # ✅ Valid version
 
       - name: Install dependencies
         run: |

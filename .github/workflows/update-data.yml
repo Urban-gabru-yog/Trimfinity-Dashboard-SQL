@@ -35,10 +35,10 @@ jobs:
           echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
 
       - name: Run Retell Fetch Script
-        run: python fetch_retell_data.py
+        run: python fetch_retell.py
 
       - name: Run Shopify Fetch Script
-        run: python fetch_shopify_orders.py
+        run: python fetch_shopify.py
 
       - name: Run Merge Script
-        run: python merge_data.py
+        run: python merge_new.py

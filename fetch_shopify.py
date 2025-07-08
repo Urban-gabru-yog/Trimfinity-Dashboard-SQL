@@ -10,6 +10,9 @@ def fetch_and_store_shopify_orders():
     store = os.getenv("SHOPIFY_STORE")
     token = os.getenv("SHOPIFY_ACCESS_TOKEN")
 
+    print("DEBUG: SHOPIFY_STORE =", os.getenv("SHOPIFY_STORE"))
+    print("DEBUG: SHOPIFY_ACCESS_TOKEN =", "SET" if os.getenv("SHOPIFY_ACCESS_TOKEN") else "NOT SET")
+
     url = f"https://{store}/admin/api/2023-01/orders.json"
     params = {
         "status": "any",
